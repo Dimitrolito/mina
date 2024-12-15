@@ -36,7 +36,7 @@ An extension's only input should be Transition Frontier Diffs. An extension shou
 
 ### New Transition Frontier Micro-diffs
 
-Transition Frontier Diffs will now be represented as smaller, composable micro-diffs rather than monolithic diffs like before. The primary advantage of this is composability, however it also helps to unify diffs with persistent diffs, allowing us to more easily implement the incremental hash computation in transition frontier and removes a layer of translation between diff formats. It also more easily allows us to defer extra computation into the Transition Frontier Extensions themselves by keeping the individual diffs light. Below is an psuedo-code implementation of the new micro-diffs.
+Transition Frontier Diffs will now be represented as smaller, composable micro-diffs rather than monolithic diffs like before. The primary advantage of this is composability, however it also helps to unify diffs with persistent diffs, allowing us to more easily implement the incremental hash computation in transition frontier and removes a layer of translation between diff formats. It also more easily allows us to defer extra computation into the Transition Frontier Extensions themselves by keeping the individual diffs light. Below is a psuedo-code implementation of the new micro-diffs.
 
 ```ocaml
 type 'mutant diff =
